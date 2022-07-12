@@ -1,0 +1,158 @@
+ubuntu@aditya:~$ cd Desktop/Web_development/Section-21_git/Story/
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/ubuntu/Desktop/Web_development/Section-21_git/Story/.git/
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ ls -a
+.  ..  chapter1.txt  .git  .swp
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.swp
+	chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git add chapter1.txt 
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ man git commit
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git commit -m  "Complete Chapter 1"^C
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ open chapter1.txt 
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ [main 2022-07-10T11:45:01.104Z] update#setState idle
+[9010:0710/171501.314462:ERROR:sandbox_linux.cc(377)] InitializeSandbox() called with multiple threads in process gpu-process.
+mesa: for the --simplifycfg-sink-common option: may only occur zero or one times!
+mesa: for the --global-isel-abort option: may only occur zero or one times!
+mesa: for the --amdgpu-atomic-optimizations option: may only occur zero or one times!
+[main 2022-07-10T11:45:04.719Z] Starting extension host with pid 9085 (fork() took 21 ms).
+[main 2022-07-10T11:45:31.142Z] update#setState checking for updates
+[main 2022-07-10T11:45:31.166Z] update#setState available for download
+^C
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git commit -m "Completed Chapter 1" 
+[master (root-commit) afc2bf2] Completed Chapter 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chapter1.txt
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git log
+commit afc2bf25edcd6cf53b50bfe43de79b86df43e3ea (HEAD -> master)
+Author: Aditya <aditya13raja@gmail.com>
+Date:   Sun Jul 10 17:16:40 2022 +0530
+
+    Completed Chapter 1
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ touch chapter2.txt chapter3.txt
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ open .
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ 
+** (nemo:9291): WARNING **: 17:18:42.676: Current gtk theme is not known to have nemo support (WhiteSur-dark) - checking...
+[main 2022-07-10T11:49:40.735Z] Waiting for extension host with pid 9085 to exit.
+[main 2022-07-10T11:49:40.838Z] Extension host with pid 9085 exited with code: 0, signal: null.
+^C
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ 
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git add .
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .swp
+	modified:   chapter1.txt
+	new file:   chapter2.txt
+	new file:   chapter3.txt
+
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git commit -m "complete chapter 2 and 3"
+[master b295c4e] complete chapter 2 and 3
+ 4 files changed, 3 insertions(+)
+ create mode 100644 .swp
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git log
+commit b295c4ea070dc148500c97b4e1837b83da07aba0 (HEAD -> master)
+Author: Aditya <aditya13raja@gmail.com>
+Date:   Sun Jul 10 17:21:50 2022 +0530
+
+    complete chapter 2 and 3
+
+commit afc2bf25edcd6cf53b50bfe43de79b86df43e3ea
+Author: Aditya <aditya13raja@gmail.com>
+Date:   Sun Jul 10 17:16:40 2022 +0530
+
+    Completed Chapter 1
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ code .
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index e2e37a2..b36da63 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-Chapter 3 me aapka swagat hai.
+\ No newline at end of file
++Chapter 3 me aapka swagat hai. Kuch kahaniya hai mere pas.
+\ No newline at end of file
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git checkout chapter3.txt
+Updated 1 path from the index
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ neofetch
+Command 'neofetch' not found, but can be installed with:
+sudo apt install neofetch
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ screenfetch
+Command 'screenfetch' not found, but can be installed with:
+sudo apt install screenfetch
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ htop
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ vim chapter2.txt 
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git log
+commit b295c4ea070dc148500c97b4e1837b83da07aba0 (HEAD -> master)
+Author: Aditya <aditya13raja@gmail.com>
+Date:   Sun Jul 10 17:21:50 2022 +0530
+
+    complete chapter 2 and 3
+
+commit afc2bf25edcd6cf53b50bfe43de79b86df43e3ea
+Author: Aditya <aditya13raja@gmail.com>
+Date:   Sun Jul 10 17:16:40 2022 +0530
+
+    Completed Chapter 1
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git remote add orign https://github.com/aditya13raja/Project.git
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git status
+On branch master
+nothing to commit, working tree clean
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ ^C
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git remove -v
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git remote -v
+orign	https://github.com/aditya13raja/Project.git (fetch)
+orign	https://github.com/aditya13raja/Project.git (push)
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@aditya:~/Desktop/Web_development/Section-21_git/Story$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
